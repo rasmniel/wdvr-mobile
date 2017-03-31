@@ -1,0 +1,141 @@
+<a-scene fog="type: exponential; color: #AAA; density: 0.00009;">
+
+    <a-assets>
+        <video id="video" src=""></video>
+
+        <img id="skybox" src="img/lobby/skybox.jpg" />
+
+        <img id="earth" src="img/lobby/earth.jpg" />
+        <img id="sun" src="img/lobby/sun.jpg" />
+        <img id="moon" src="img/lobby/moon.jpg" />
+
+        <img id="frame-content" src="img/lobby/frame-content.png" />
+        <img id="frame-selected" src="img/lobby/frame-selected.png" />
+        <img id="button-play" src="img/lobby/button-play.png" />
+        <img id="button-pause" src="img/lobby/button-pause.png" />
+        <img id="button-stop" src="img/lobby/button-stop.png" />
+        <img id="button-left" src="img/lobby/button-left.png" />
+        <img id="button-right" src="img/lobby/button-right.png" />
+    </a-assets>
+
+    <a-entity id="lobby-content" visible="true">
+
+        <a-sky src="#skybox" radius="5000">
+            <a-animation ease="ease-in-out-sine" dur="200000" repeat="indefinite" attribute="rotation" fill="forwards" from="-240 360 0" to="120 0 0"></a-animation>
+
+            <!--Sun-->
+            <a-sphere src="#sun" color="yellow" position="0 -100 0" rotation="90 0 0" scale="10 10 10"></a-sphere>
+            <a-light type="point" intensity="1.5" color="white" position="0 -500 0"></a-light>
+
+            <!--Moon-->
+            <a-sphere src="#moon" color="white" position="0 100 0" scale="5 5 5"></a-sphere>
+            <a-light type="point" intensity="0.2" color="white" position="0 500 0"></a-light>
+        </a-sky>
+
+        <!--Earth-->
+        <a-sphere src="#earth" position="0 -9.5 0" scale="7.5 7.5 7.5">
+            <a-animation ease="ease-in-out-sine" dur="150000" repeat="indefinite" attribute="rotation" fill="forwards" from="5 0 34" to="5 360 34"></a-animation>
+        </a-sphere>
+
+        <!-- Control panel with frames, video thumbnails & left-, right- & play buttons -->
+        <a-entity position="0 2 -25" scale="1.2 1.2 1">
+            <a-image src="#frame-content" scale="16 10 0"></a-image>
+
+            <!-- Left arrow button -->
+            <a-image class="clickable" button-prev position="-10 0.5 0" src="#button-left">
+                <a-animation begin="cursortrigger" end="cursorabort" attribute="material.color" fill="forwards" from="white" to="#19DC19" dur="2000"></a-animation>
+                <a-animation begin="cursorabort" attribute="material.color" fill="forwards" to="white" dur="200"></a-animation>
+            </a-image>
+
+            <!-- Right arrow button -->
+            <a-image class="clickable" button-next position="10 0.5 0" src="#button-right">
+                <a-animation begin="cursortrigger" end="cursorabort" attribute="material.color" fill="forwards" from="white" to="#19DC19" dur="2000"></a-animation>
+                <a-animation begin="cursorabort" attribute="material.color" fill="forwards" to="white" dur="200"></a-animation>
+            </a-image>
+
+            <a-entity position="-3.5 2 0" scale="5 2.5 1">
+                <a-image id="frame00" material="opacity: 0;" src="#frame-selected" position="0 0 0.1" scale="1.2 1.4 1">
+                    <a-animation begin="focusstart" end="focusend" attribute="material.opacity" to="1" dur="200"></a-animation>
+                    <a-animation begin="focusend" attribute="material.opacity" to="0" dur="200"></a-animation>
+                </a-image>
+                <a-image target id="video00" class="clickable" position="0 0 0.2"></a-image>
+            </a-entity>
+
+            <a-entity position="3.5 2 0" scale="5 2.5 1">
+                <a-image id="frame01" material="opacity: 0;" src="#frame-selected" position="0 0 0.1" scale="1.2 1.4 1">
+                    <a-animation begin="focusstart" end="focusend" attribute="material.opacity" to="1" dur="200"></a-animation>
+                    <a-animation begin="focusend" attribute="material.opacity" to="0" dur="200"></a-animation>
+                </a-image>
+                <a-image target id="video01" class="clickable" position="0 0 0.2"></a-image>
+            </a-entity>
+
+            <a-entity position="-3.5 -2 0" scale="5 2.5 1">
+                <a-image id="frame02" material="opacity: 0;" src="#frame-selected" position="0 0 0.1" scale="1.2 1.4 1">
+                    <a-animation begin="focusstart" end="focusend" attribute="material.opacity" to="1" dur="200"></a-animation>
+                    <a-animation begin="focusend" attribute="material.opacity" to="0" dur="200"></a-animation>
+                </a-image>
+                <a-image target id="video02" class="clickable" position="0 0 0.2"></a-image>
+            </a-entity>
+
+            <a-entity position="3.5 -2 0" scale="5 2.5 1">
+                <a-image id="frame03" material="opacity: 0;" src="#frame-selected" position="0 0 0.1" scale="1.2 1.4 1">
+                    <a-animation begin="focusstart" end="focusend" attribute="material.opacity" to="1" dur="200"></a-animation>
+                    <a-animation begin="focusend" attribute="material.opacity" to="0" dur="200"></a-animation>
+                </a-image>
+                <a-image target id="video03" class="clickable" position="0 0 0.2"></a-image>
+            </a-entity>
+
+            <a-image lobby-play-button class="clickable" id="lobby-play-button" src="#button-play" visible="false" position="0 -6.5 0" scale="1.5 1.5 0">
+                <a-animation begin="cursortrigger" end="cursorabort" attribute="material.color" fill="forwards" from="white" to="#19DC19" dur="2000"></a-animation>
+                <a-animation begin="cursorabort" attribute="material.color" fill="forwards" to="white" dur="200"></a-animation>
+            </a-image>
+        </a-entity>
+    </a-entity>
+
+    <a-camera id="main-camera">
+        <a-cursor hackursor color="#05669F">
+            <a-animation begin="cursortrigger" end="cursorabort" easing="ease-in" dur="2000" attribute="scale" fill="forwards" from="2 2 1" to="1 1 1"></a-animation>
+            <a-animation begin="cursorabort" easing="linear" dur="200" attribute="scale" fill="forwards" from="2 2 1" to="1 1 1"></a-animation>
+            <a-animation begin="cursortrigger" end="cursorabort" easing="linear" dur="2000" attribute="material.color" fill="forwards" from="white" to="#05669F"></a-animation>
+            <a-animation begin="cursorabort" easing="linear" dur="200" attribute="material.color" fill="forwards" from="white" to="#05669F"></a-animation>
+        </a-cursor>
+    </a-camera>
+
+    <a-entity visible="false" id="buttons-control-frame" position="0 -4 -4" scale="0.5 0.5 0.5" look-at="#main-camera">
+        <a-image src="#frame-content" scale="5 3 5"></a-image>
+        <a-image control-button class="clickable" src="#button-stop" position="-0.6 0 6">
+            <a-animation begin="cursortrigger" end="cursorabort" attribute="material.color" fill="forwards" from="white" to="#19DC19" dur="2000"></a-animation>
+            <a-animation begin="cursorabort" attribute="material.color" fill="forwards" to="white" dur="200"></a-animation>
+        </a-image>
+        <a-image control-button id="buttons-play-pause" class="clickable" src="#button-pause" position="0.6 0 6">
+            <a-animation begin="cursortrigger" end="cursorabort" attribute="material.color" fill="forwards" from="white" to="#19DC19" dur="2000"></a-animation>
+            <a-animation begin="cursorabort" attribute="material.color" fill="forwards" to="white" dur="200"></a-animation>
+        </a-image>
+    </a-entity>
+
+</a-scene>
+
+<!--Esbjerg sphere-->
+<!-- <a-entity text="text: Esbjerg; size: 10;" material="shader: flat; color: #4CC3D9;" position="-72 17 -200"></a-entity>
+<a-sphere target id="esbjerg" src="#thumbnail" class="clickable" position="-50 2 -200" color="white" scale="10 10 10">
+  <a-animation begin="hackevent" dur="5000" ease="ease-in-cubic" attribute="position" fill="forwards" to="0 2 -15"></a-animation>
+  <a-animation ease="ease-out-circ" dur="50000" repeat="indefinite" attribute="rotation" fill="forwards" from="0 0 0" to="0 360 0"></a-animation>
+  <a-animation begin="cursorabort" dur="1" attribute="position" to="-50 2 -200"></a-animation>
+</a-sphere> -->
+
+<!--Venice sphere-->
+<!-- <a-entity text="text: Venice; size: 10;" material="shader: flat; color: #4CC3D9;" position="185 125 110" rotation="0 235 0"></a-entity>
+<a-sphere target id="venice" src="#thumbnail" class="clickable" position="200 125 150" color="white" scale="10 10 10">
+  <a-animation begin="hackevent" dur="5000" ease="ease-in-cubic" attribute="position" fill="forwards" to="10 2 10"></a-animation>
+  <a-animation ease="ease-out-circ" dur="50000" repeat="indefinite" attribute="rotation" fill="forwards" from="0 0 0" to="0 360 0"></a-animation>
+  <a-animation begin="cursorabort" dur="1" attribute="position" to="200 125 150"></a-animation>
+</a-sphere> -->
+
+<!--Kosmorama sphere-->
+<!-- <a-entity text="text: Kosmo; size: 10;" material="shader: flat; color: #4CC3D9;" position="-100 60 200" rotation="0 130 0"></a-entity>
+<a-sphere target id="kosmorama" src="#thumbnail" class="clickable" position="-125 50 200" color="white" scale="10 10 10">
+  <a-animation begin="hackevent" dur="5000" ease="ease-in-cubic" attribute="position" fill="forwards" to="-10 2 10"></a-animation>
+  <a-animation ease="ease-out-sine" dur="50000" repeat="indefinite" attribute="rotation" fill="forwards" from="0 0 0" to="0 360 0"></a-animation>
+  <a-animation begin="cursorabort" dur="1" attribute="position" to="-125 50 200"></a-animation>
+</a-sphere>
+</a-entity> -->

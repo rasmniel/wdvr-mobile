@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html data-ng-app="wdvr-mobile">
+
+<head>
+	<title>wdvr-mobile</title>
+	<link rel="shortcut icon" href="img/favicon.ico" />
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline' *; object-src 'self'; style-src 'self' 'unsafe-inline'; media-src data: *">
+
+	<link href="manifest.json" rel="manifest">
+
+	<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/home.css" rel="stylesheet">
+	<link href="css/admin.css" rel="stylesheet">
+	<link href="css/library.css" rel="stylesheet">
+	<link href="css/buttons.css" rel="stylesheet">
+	<link href="css/remote.css" rel="stylesheet">
+	<link href="css/spinner.css" rel="stylesheet">
+
+	<!-- ionic/angularjs js -->
+	<script src="lib/ionic/js/ionic.bundle.js"></script>
+
+	<!-- Libraries -->
+	<script src="lib/ngCordova/dist/ng-cordova.js"></script>
+	<script src="lib/socket.io-client/dist/socket.io.js"></script>
+	<script src="lib/angular-socket-io/socket.js"></script>
+	<script src="lib/jquery/dist/jquery.js"></script>
+	<script src="customLib/aframe032/aframe.js"></script>
+	<script src="customLib/aframe-look-at-component/dist/aframe-look-at-component.js"></script>
+	<script src="customLib/aframe-text-component/dist/aframe-text-component.js"></script>
+
+	<!-- cordova script (this will be a 404 during development) -->
+	<script src="cordova.js"></script>
+
+	<!-- app.js -->
+	<script src="js/app.js"></script>
+
+	<!-- Services -->
+	<script src="js/services/languageService.js"></script>
+	<script src="js/services/lobbyService.js"></script>
+	<script src="js/services/gatewayService.js"></script>
+	<script src="js/services/commService.js"></script>
+	<script src="js/services/loadingService.js"></script>
+
+	<!-- Directives -->
+	<script src="js/directives/menu-button/menu-button.js"></script>
+
+	<!-- Controllers -->
+	<script src="js/controllers/languageCtrl.js"></script>
+	<script src="js/controllers/homeCtrl.js"></script>
+	<script src="js/controllers/lobbyCtrl.js"></script>
+	<script src="js/controllers/adminCtrl.js"></script>
+	<script src="js/controllers/libraryCtrl.js"></script>
+	<script src="js/controllers/previewCtrl.js"></script>
+	<script src="js/controllers/remoteCtrl.js"></script>
+</head>
+
+<body ng-controller="LanguageCtrl as lang">
+	<ion-side-menus>
+		<ion-side-menu side="left">
+			<ion-menu>
+				<ion-header class="menu-header">
+					<h1>{{lang.getText('languageMenu')}}</h1>
+				</ion-header>
+				<ion-content class="menu-list" scroll="true">
+					<ion-list>
+						<div menu-close class="item" ng-repeat="language in lang.service.langs | orderBy:'language'" ng-click="lang.selectLanguage(language);">
+							<p class="white-text" style="text-align: left">{{language.language}}</p>
+							<img ng-src="{{language.url}}">
+						</div>
+					</ion-list>
+				</ion-content>
+			</ion-menu>
+		</ion-side-menu>
+
+		<ion-side-menu-content>
+			<ion-nav-view></ion-nav-view>
+		</ion-side-menu-content>
+
+	</ion-side-menus>
+
+</body>
+
+</html>

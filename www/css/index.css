@@ -1,0 +1,38 @@
+.menu-header h1 {
+    height: auto;
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
+    top: 4.5vh;
+    color: #005D91;
+}
+
+.menu-list {
+    margin-top: 10vh;
+    height: 80vh;
+}
+
+.menu-list .item:active {
+    background-color: #53C6E6;
+}
+
+.menu-list .item * {
+    display: inline;
+    font-size: 5vh;
+    line-height: 1.5;
+    color: #005D91;
+}
+
+@media (min-width: 600px) {
+    .menu-list .item * {
+        font-size: 4.5vw;
+    }
+}
+
+.menu-list .item *:nth-child(1) {
+    float: left;
+}
+
+.menu-list .item *:nth-child(2) {
+    float: right;
+}

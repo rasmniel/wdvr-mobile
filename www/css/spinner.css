@@ -1,0 +1,14 @@
+/* Loading spinner. */
+
+.spinner svg {
+  width: 12em;
+  height: 12em;
+}
+
+.loading-container {
+  background-color: #53C6E6;
+}
+
+.loading-container .loading {
+  background-color: rgba(0, 0, 0, 0);
+}

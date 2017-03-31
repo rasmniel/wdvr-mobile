@@ -1,0 +1,70 @@
+{
+    "login": {
+        "da_DK": "Log Ind",
+        "en_US": "Login"
+    },
+    "enter-vr": {
+        "da_DK": "Start VR!",
+        "en_US": "Enter VR!"
+    },
+    "return": {
+        "da_DK": "Tilbage",
+        "en_US": "Return"
+    },
+    "languageMenu": {
+        "da_DK": "Sprog",
+        "en_US": "Language"
+    },
+    "welcomeText": {
+        "da_DK": "Velkommen til Welfare Denmark's Virtual Reality applikation. Her kan du starte VR oplevelsen direkte. Du kan også afvente at din terapeut sender en video til dig, så de kan følge med i, hvad du ser.",
+        "en_US": "Welcome to Welfare Denmark's Virtual Reality application. Here you can start the VR experience directly. You can also await your therapist sending you a video, which they will then be able to follow."
+    },
+    "loginText": {
+        "da_DK": "Denne side er kun tilegnet administratorer og terapeuter, som her kan logge ind og caste systemets videoer til en afventende bruger. Hvis du ikke kender til login information, så er du kommet det forkerte sted hen og kan roligt gå tilbage til forsiden ved at trykke på teksten forneden.",
+        "en_US": "This page is only ment for administrators and therapists, who can log in and cast videos from the system to the awaiting user. If you are unaware of any login information, you have arrived at the incorrect location and may return to the front page by pressing the text below."
+    },
+    "welcome": {
+        "da_DK": "Velkommen",
+        "en_US": "Welcome"
+    },
+    "cast": {
+        "da_DK": "Cast",
+        "en_US": "Cast"
+    },
+    "play": {
+        "da_DK": "Afspil",
+        "en_US": "Play"
+    },
+    "loginError": {
+        "da_DK": "Brugernavn eller kodeord eksisterer ikke, prøv venligst igen.",
+        "en_US": "Username or password does not exist, please try again."
+    },
+    "usernamePlaceholder": {
+        "da_DK": "Brugernavn",
+        "en_US": "Username"
+    },
+    "passwordPlaceholder": {
+        "da_DK": "Kodeord",
+        "en_US": "Password"
+    },
+    "library": {
+        "da_DK": "Bibliotek",
+        "en_US": "Library"
+    },
+    "adminLogin": {
+        "da_DK": "Log ind som Admin",
+        "en_US": "Admin login"
+    },
+    "noConnectionsAvailable": {
+        "da_DK": "Ingen forbindelser tilgængelig.",
+        "en_US": "No connections available."
+    },
+    "spinnerText": {
+        "da_DK": "Kontakter serveren...",
+        "en_US": "Contacting server..."
+    },
+    "serverError": {
+        "da_DK": "Serveren svarer ikke, prøv venligst senere.",
+        "en_US": "The server is not responding, please try again later."
+    }
+}

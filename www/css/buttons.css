@@ -1,0 +1,140 @@
+.content-font {
+    text-align: center;
+    font-size: 3.5vh;
+    color: white;
+    user-select: none;
+    pointer-events: none;
+}
+
+.center-vert {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+
+/*Header Button*/
+
+.tiny-button {
+    display: inline-block;
+    width: 8vh;
+    height: 8vh;
+    position: absolute;
+    top: 2.5vh;
+    border-radius: 100%;
+    background-color: #005D91;
+    transition: background-color 0.1s ease;
+    border: #53C6E6 solid 2px;
+}
+
+.tiny-button:active {
+    background-color: transparent;
+}
+
+.tiny-button p {
+    font-family: Helvetica;
+    font-size: 6vh;
+}
+
+.tiny-button-right {
+    right: 4vh;
+}
+
+.tiny-button-left {
+    left: 4vh;
+}
+
+
+/*Medium Button*/
+
+.medium-button {
+    display: inline-block;
+    width: 10vh;
+    height: 10vh;
+    position: absolute;
+    bottom: 4vh;
+    right: 4vh;
+    border: solid #53C6E6 2px;
+    border-radius: 100%;
+    text-align: center;
+    color: #53C6E6;
+}
+
+.medium-button i {
+    display: inline-block;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 6vh;
+}
+
+
+/*Wide Button*/
+
+.button-fall {
+    position: absolute;
+    left: 50%;
+    bottom: 2vh;
+    transform: translateX(-50%);
+}
+
+.wide-button {
+    margin: auto;
+    width: 80%;
+    height: 6vh;
+    border-radius: 100px;
+    background-color: #53C6E6;
+    z-index: 2;
+}
+
+.wide-button:active {
+    opacity: 0.25;
+}
+
+.wide-button p {
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+
+/*Round Button*/
+
+.round-border {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 75%;
+    left: 50%;
+    padding: 0.5vh;
+    margin: 0;
+    background-color: #005D91;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.round-button {
+    width: 20vh;
+    height: 20vh;
+    transition: background-color 0.1s ease;
+    background-color: #19DC19;
+    border-radius: 100%;
+}
+
+.round-button:active {
+    background-color: #7AFF7A;
+}
+
+.round-button p {
+    position: relative;
+    transform: translateY(-50%);
+    top: 52%;
+    margin: 0;
+    padding: 0;
+    font-size: 5vh;
+    color: white;
+}

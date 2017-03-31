@@ -1,0 +1,110 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "aframe-look-at-component",
+        "scope": null,
+        "escapedName": "aframe-look-at-component",
+        "name": "aframe-look-at-component",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\JS Web Apps\\virtual-training-vr\\wdvr-mobile"
+    ]
+  ],
+  "_from": "aframe-look-at-component@latest",
+  "_id": "aframe-look-at-component@0.1.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/aframe-look-at-component",
+  "_nodeVersion": "0.12.6",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/aframe-look-at-component-0.1.2.tgz_1470884727447_0.10167030524462461"
+  },
+  "_npmUser": {
+    "name": "ngokevin",
+    "email": "me@ngokevin.com"
+  },
+  "_npmVersion": "2.11.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "aframe-look-at-component",
+    "scope": null,
+    "escapedName": "aframe-look-at-component",
+    "name": "aframe-look-at-component",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/aframe-look-at-component/-/aframe-look-at-component-0.1.2.tgz",
+  "_shasum": "6860c18fd06e1a55b19111a0a07bea982af0ad2c",
+  "_shrinkwrap": null,
+  "_spec": "aframe-look-at-component",
+  "_where": "C:\\JS Web Apps\\virtual-training-vr\\wdvr-mobile",
+  "author": {
+    "name": "Kevin Ngo",
+    "email": "me@ngokevin.com"
+  },
+  "browser": "dist/aframe-look-at-component.min.js",
+  "bugs": {
+    "url": "https://github.com/ngokevin/aframe-look-at-component/issues"
+  },
+  "dependencies": {},
+  "description": "Look-at component for A-Frame.",
+  "devDependencies": {
+    "aframe": "^0.2.0",
+    "browserify": "^12.0.1",
+    "browserify-css": "^0.8.3",
+    "budo": "^7.1.0",
+    "ghpages": "0.0.3",
+    "inquirer": "^0.12.0",
+    "shelljs": "^0.6.0",
+    "webpack": "^1.12.9"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "6860c18fd06e1a55b19111a0a07bea982af0ad2c",
+    "tarball": "https://registry.npmjs.org/aframe-look-at-component/-/aframe-look-at-component-0.1.2.tgz"
+  },
+  "gitHead": "ddcf223e7fdeec3b536bbc43a233b994cd6d4653",
+  "homepage": "https://github.com/ngokevin/aframe-look-at-component#readme",
+  "keywords": [
+    "aframe",
+    "aframe-component",
+    "aframe-vr",
+    "vr",
+    "mozvr",
+    "webvr"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "ngokevin",
+      "email": "me@ngokevin.com"
+    }
+  ],
+  "name": "aframe-look-at-component",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngokevin/aframe-look-at-component.git"
+  },
+  "scripts": {
+    "build": "browserify examples/main.js -o examples/build.js",
+    "dev": "budo examples/main.js:build.js --dir examples --port 8000 --live --open",
+    "dist": "webpack index.js dist/aframe-look-at-component.js && webpack -p index.js dist/aframe-look-at-component.min.js",
+    "ghpages": "npm run preghpages && ghpages -p gh-pages",
+    "postpublish": "npm run dist",
+    "preghpages": "npm run build && rm -rf gh-pages && cp -r examples gh-pages",
+    "unboil": "node scripts/unboil.js"
+  },
+  "version": "0.1.2"
+}

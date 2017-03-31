@@ -1,0 +1,38 @@
+.admin-focus {
+    margin-top: 10vh;
+    height: auto;
+}
+
+.admin-focus h1 {
+    text-align: center;
+}
+
+.device-human,
+.device-meta {
+	display: inline;
+}
+
+.device-human i,
+.device-human p {
+	display: inline;
+	color: white;
+	font-size: 4vh;
+}
+
+.device-human i {
+	margin-left: 0;
+	margin-right: 2vh;
+}
+
+.device-meta p {
+	display: block;
+	font-size: 2vh;
+}
+
+#no-listeners-text {
+	color: white;
+	font-weight: bold;
+	margin-top: 5vh;
+	font-size: 5vh;
+    line-height: 2;
+}

@@ -1,0 +1,31 @@
+<div class="bg-blue-to-green">
+    <menu-button></menu-button>
+
+    <div class="center-focus home-focus">
+
+        <div ng-if="!home.loginMode">
+            <div class="vr-splash transparent-background" ng-click="home.enterLobby()">
+                <!--<p id="vr-text" class="content-font">VR</p>-->
+                <img src="img/wd-logo.png" />
+            </div>
+            <div id="enter-vr-button" class="wide-button" ng-click="home.enterLobby()">
+                <p class="content-font">{{lang.getText('enter-vr')}}</p>
+            </div>
+            <p class="textbody">{{lang.getText('welcomeText')}}</p>
+        </div>
+
+        <div ng-if="home.loginMode" class="login-section">
+            <h1 class="white-text">{{lang.getText('adminLogin')}}</h1>
+            <input class="transparent-background white-text" placeholder="{{lang.getText('usernamePlaceholder')}}" type="text" ng-model="home.username">
+            <input class="transparent-background" type="password" placeholder="{{lang.getText('passwordPlaceholder')}}" ng-model="home.password">
+            <div class="wide-button" ng-click="home.login()">
+                <p class="content-font">{{lang.getText('login')}}</p>
+            </div>
+            <p class="textbody">{{lang.getText('loginText')}}</p>
+        </div>
+
+        <div ng-click="home.loginMode = !home.loginMode; home.clearLogin()" class="login">
+            <p>{{home.loginMode ? lang.getText('return') : lang.getText('login') | uppercase}}</p>
+        </div>
+    </div>
+</div>

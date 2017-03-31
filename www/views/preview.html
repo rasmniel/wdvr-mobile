@@ -1,0 +1,37 @@
+<a-scene>
+
+	<a-assets>
+		<video id="preview-video" src=""></video>
+
+		<!--Controls assets-->
+		<img id="button-play" src="img/lobby/button-play.png" />
+		<img id="button-pause" src="img/lobby/button-pause.png" />
+		<img id="button-stop" src="img/lobby/button-stop.png" />
+		<img id="frame-content" src="img/lobby/frame-content.png" />
+	</a-assets>
+
+	<a-videosphere src="#preview-video"></a-videosphere>
+
+	<!--Cursor and controls-->
+	<a-camera id="main-camera">
+		<a-cursor hackursor color="#05669F">
+			<a-animation begin="cursortrigger" end="cursorabort" easing="ease-in" dur="2000" attribute="scale" fill="forwards" from="2 2 1" to="1 1 1"></a-animation>
+			<a-animation begin="cursorabort" easing="linear" dur="200" attribute="scale" fill="forwards" from="2 2 1" to="1 1 1"></a-animation>
+			<a-animation begin="cursortrigger" end="cursorabort" easing="linear" dur="2000" attribute="material.color" fill="forwards" from="white" to="#05669F"></a-animation>
+			<a-animation begin="cursorabort" easing="linear" dur="200" attribute="material.color" fill="forwards" from="white" to="#05669F"></a-animation>
+		</a-cursor>
+	</a-camera>
+
+	<a-entity visible="true" id="buttons-control-frame" position="0 -4 -4" scale="0.5 0.5 0.5" look-at="#main-camera">
+		<a-image src="#frame-content" scale="5 3 5"></a-image>
+		<a-image control-button id="stop-control" class="clickable" src="#button-stop" position="-0.6 0 6">
+			<a-animation begin="cursortrigger" end="cursorabort" attribute="material.color" fill="forwards" from="white" to="#19DC19" dur="2000"></a-animation>
+			<a-animation begin="cursorabort" attribute="material.color" fill="forwards" to="white" dur="400"></a-animation>
+		</a-image>
+		<a-image control-button id="buttons-play-pause" class="clickable" src="#button-pause" position="0.6 0 6">
+			<a-animation begin="cursortrigger" end="cursorabort" attribute="material.color" fill="forwards" from="white" to="#19DC19" dur="2000"></a-animation>
+			<a-animation begin="cursorabort" attribute="material.color" fill="forwards" to="white" dur="400"></a-animation>
+		</a-image>
+	</a-entity>
+
+</a-scene>

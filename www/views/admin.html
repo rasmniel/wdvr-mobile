@@ -1,0 +1,36 @@
+<div class="bg-blue-to-brown">
+
+    <menu-button></menu-button>
+
+    <div class="center-focus admin-focus">
+        <h2 class="white-text">{{lang.getText('welcome') | uppercase}}</h2>
+
+        <h1 class="white-text">{{admin.getUsername()}}</h1>
+        <button class="wide-button" style="margin-top: 4vh;" ng-click="admin.go('library')">
+            <p class="content-font" style="margin-top: 2.5vh;">
+                {{lang.getText('library')}}
+            </p>
+        </button>
+        <div ng-if="admin.listeners.length" class="list spaced-list">
+            <div class="item" ng-repeat="listener in admin.listeners track by listener.uuid" ng-click="admin.setSlave(listener)">
+                <div class="device-human">
+                    <i ng-if="listener.uuid == admin.slaveUuid" class="icon ion-link"></i>
+                    <p>
+                        {{listener.name}}
+                    </p>
+                </div>
+                <div class="device-meta">
+                    <p>r
+                        {{listener.model}} - {{listener.uuid}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div ng-if="!admin.listeners.length">
+            <p id="no-listeners-text">
+                {{lang.getText('noConnectionsAvailable')}}
+            </p>
+        </div>
+    </div>
+
+</div>

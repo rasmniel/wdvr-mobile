@@ -1,0 +1,30 @@
+{
+  "name": "wdvr-mobile",
+  "private": true,
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.3.2"
+  },
+  "authors": [
+    "Rasmus Nielsen <rasmniel@gmail.com>",
+    "Hardy Drachmann <hardydrachmann@phoebuscartel.dk"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "aframe": "0.3.2",
+    "socket.io-client": "^1.7.1",
+    "angular-socket-io": "^0.7.0",
+    "ngCordova": "^0.1.27-alpha",
+    "jquery": "^3.1.1"
+  }
+}

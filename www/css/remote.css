@@ -1,0 +1,46 @@
+#remote-view {
+  height: 100%;
+  width: 100%;
+}
+
+#control-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50.8%;
+  height: 100%;
+  background-color: black;
+  border-left-style: solid;
+  border-left-width: 2vh;
+  border-color: #53c6e6;
+}
+
+#control-panel {
+  margin-left: 16%;
+  margin-top: 42%;
+  height: 25%;
+  width: 70%;
+}
+
+.btn-control {
+  display: inline-block;
+  height: 25vh;
+  width: 25vh;
+}
+
+.btn-control img {
+  width: 100%;
+  height: 100%
+}
+
+#btn-stop {
+  float: left;
+}
+
+#btn-play-pause {
+  float: right;
+}
+
+#screen canvas {
+	height: 100vh;
+}

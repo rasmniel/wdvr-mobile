@@ -1,0 +1,76 @@
+.home-focus {
+    margin-top: 10vh;
+    height: 50vh;
+}
+
+.vr-splash {
+    margin: auto;
+    width: 45vh;
+    height: 45vh;
+    border-radius: 50%;
+    /*border: solid #53C6E6 5px;*/
+    text-align: center;
+}
+
+.vr-splash #vr-text {
+    position: absolute;
+    left: 28%;
+    top: 20%;
+    transform: rotate(-25deg);
+    font-size: 10vh;
+}
+
+.vr-splash img {
+    width: 80%;
+    transform: translateY(-50%);
+    margin-top: 55%;
+    font-size: 30vh;
+    font-weight: bold;
+}
+
+.transparent-background {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#enter-vr-button {
+    margin-top: 5vh;
+}
+
+.login-section {
+    margin-top: 15vh;
+}
+
+.login-section input {
+    padding: 1vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 100%;
+    height: auto;
+    font-size: 4vh;
+    text-align: center;
+    color: white !important;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+.login-section button {
+    float: right;
+    font-size: 4vh;
+}
+
+.login-section input, .login-section button {
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+.login {
+    position: absolute;
+    bottom: 2vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    display: block;
+    text-align: center;
+    font-size: 3vh;
+    font-weight: bold;
+    text-decoration: underline;
+}

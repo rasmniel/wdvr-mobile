@@ -1,0 +1,17 @@
+<ion-scroll class="bg-blue-to-brown" direction="y">
+	<h1 id="library-title" class="center-focus white-text">Video Library</h1>
+	<div class="list spaced-list">
+		<div class="item video-item" ng-repeat="video in library.videos" ng-click="library.expand($event)">
+			<div class="thumbnail">
+				<img ng-src="{{video.ThumbnailImageUrl}}" />
+			</div>
+			<div class="description">
+				<p>
+					<strong class="cyan-text">{{video.Title}}</strong><span class="white-text"> - {{video.Description}}</span>
+				</p>
+			</div>
+			<button class="video-button" ng-if="library.hasSlave()" ng-click="library.cast(video)">{{lang.getText('cast')}}</button>
+			<button class="video-button" style="float: right" ng-click="library.preview(video)">{{lang.getText('play')}}</button>
+		</div>
+	</div>
+</ion-scroll>

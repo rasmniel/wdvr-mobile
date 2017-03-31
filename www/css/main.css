@@ -1,0 +1,85 @@
+/*
+ * blue: #005D91
+ * dark: #303C50
+ * green: #19DC19
+ * light: #7AFF7A
+ * cyan: #53C6E6
+ * red: #DB1A1A
+ */
+
+.center-focus {
+    margin: auto;
+    width: 50vh;
+    text-align: center;
+}
+
+.bg-blue-to-green {
+    background-image: url('../img/backgrounds/blue-to-green.png');
+    background-size: cover;
+}
+
+.bg-blue-shoes {
+    background-image: url('../img/backgrounds/blue-shoes.png');
+    background-size: cover;
+}
+
+.bg-blue-to-brown {
+    background-image: url('../img/backgrounds/blue-to-brown.png');
+    background-size: cover;
+}
+
+* {
+    font-family: Segan;
+}
+
+a {
+    text-decoration: none;
+}
+
+.textbody {
+    width: 90%;
+    height: 25%;
+    margin: auto;
+    padding: 1em;
+    font-size: 2.5vh;
+    line-height: 1.2;
+    color: white;
+    text-align: justify;
+}
+
+.spaced-list {
+	margin: auto;
+	margin-top: 2vh;
+	width: 90%;
+}
+
+.spaced-list .item {
+	margin-bottom: 1vh;
+	background-color: #303C50;
+	border: none;
+}
+
+video {
+    margin: auto;
+    margin-top: 5vh;
+    width: 100vw;
+    display: block;
+}
+
+/* Prevent a-frame modal window from displaying predefined :after content */
+.a-orientation-modal:after {
+    content: none !important;
+}
+
+.white-text {
+    color: white;
+}
+
+.cyan-text {
+    color: #53C6E6 !important;
+}
+
+@font-face {
+    font-family: Segan;
+    src: url(../Segan-Light.ttf);
+}
